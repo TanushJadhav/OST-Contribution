@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import joblib
 
+model = joblib.load('./Model/ulc_classifier.pkl')
 
 app = Flask(__name__, static_url_path='/static')
 CORS(app)

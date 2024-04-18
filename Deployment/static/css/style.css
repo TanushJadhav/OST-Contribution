@@ -1,0 +1,190 @@
+/* <--- Start Common Components --->  */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url('../images/leaf_background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header Section  */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: transparent;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700; /* changes the boldness of text */
+}
+ /* Navbar Section  */
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: .3s ease-in-out;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Main Content Section  */
+main {
+    padding-top: 80px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+}
+/* <--- End Common Components ---> */
+
+/*  <--- Start Index.html ---> */
+
+/* Form Section  */
+form{
+    align-self: center;
+    background-color: rgb(152, 204, 141, 0.7);
+    /* max-width: 600px; */
+    width: auto;
+    padding: 20px;
+    /* border: 2px solid #ffffff; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(152, 204, 150);
+}
+
+.form-col1, .form-col2, .form-col3 {
+    float: left;
+    margin-right: 20px;
+}
+
+form label {
+    color: #fff;
+}
+
+form input {
+    margin-bottom: 3px;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    text-align: center;
+}
+
+form span {
+    color: red;
+}
+
+Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Button styling   */
+
+form button {
+    margin-top: 15px;
+    padding: 5px 20px;
+    /* border: 1px 1px; */
+    border-radius: 20px;
+    border-color: rgb(83, 107, 63);
+    background-color: rgb(169, 197, 148);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: rgb(198, 148, 102);
+    color: #fff;
+}
+
+/*  <--- End Index.html --->  */
+
+/*  <--- Start about.html --->  */
+.about-section {
+    align-self: center;
+    background-color: #625e5e4f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-pic {
+    margin: 15px;
+    width: 100px;
+    height: 100px;
+}
+/* refer to link -- https://uiverse.io/alexruix/weak-lionfish-37  */
+.card {
+    background-color: #ffffff84;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 210px;
+    transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.card-social {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform .3s ease, opacity .2s ease;
+}
+
+/* .card-social-icon:first-child{
+    margin-right: 10px
+}
+
+.card-social-icon:last-child{
+    margin-left: 10px
+} */
+
+.card-social-icon:nth-child(2){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card:hover{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 50px #c0bebe33;
+    transform: translateY(-5%);
+}
+
+.card:hover .card-social{
+    transform: translateY(50%);
+    opacity: 1;
+}
+
+/*  <--- End about.html --->  */
